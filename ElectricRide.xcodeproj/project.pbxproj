@@ -9,16 +9,36 @@
 /* Begin PBXBuildFile section */
 		81C38C172DEA49D7008BDC67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C38C112DEA49D7008BDC67 /* Preview Assets.xcassets */; };
 		81C38C182DEA49D7008BDC67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C38C132DEA49D7008BDC67 /* Assets.xcassets */; };
-		81C38C192DEA49D7008BDC67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C142DEA49D7008BDC67 /* ContentView.swift */; };
+		81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C142DEA49D7008BDC67 /* DetailedListingView.swift */; };
 		81C38C1A2DEA49D7008BDC67 /* ElectricRideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C152DEA49D7008BDC67 /* ElectricRideApp.swift */; };
+		81C38C1F2DEA5081008BDC67 /* DetailedListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C1E2DEA5081008BDC67 /* DetailedListing.swift */; };
+		81C38C212DEA518B008BDC67 /* DetailedListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C202DEA518B008BDC67 /* DetailedListingViewModel.swift */; };
+		81C38C242DEA528E008BDC67 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 81C38C232DEA528E008BDC67 /* Auth */; };
+		81C38C262DEA528E008BDC67 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 81C38C252DEA528E008BDC67 /* Functions */; };
+		81C38C282DEA528E008BDC67 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 81C38C272DEA528E008BDC67 /* PostgREST */; };
+		81C38C2A2DEA528E008BDC67 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 81C38C292DEA528E008BDC67 /* Realtime */; };
+		81C38C2C2DEA528E008BDC67 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 81C38C2B2DEA528E008BDC67 /* Storage */; };
+		81C38C2E2DEA528E008BDC67 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 81C38C2D2DEA528E008BDC67 /* Supabase */; };
+		81C38C312DEA52E2008BDC67 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C302DEA52DE008BDC67 /* Supabase.swift */; };
+		81C38C362DEA53C2008BDC67 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C352DEA53C2008BDC67 /* Logger.swift */; };
+		81C38C392DEA55CD008BDC67 /* IndividualListingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C382DEA55CD008BDC67 /* IndividualListingRowView.swift */; };
+		81C38C3B2DEA5932008BDC67 /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C3A2DEA5932008BDC67 /* KeyValueView.swift */; };
+		81C38C3D2DEA5948008BDC67 /* IndividualListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C3C2DEA5948008BDC67 /* IndividualListingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		81C38C002DEA3504008BDC67 /* ElectricRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C38C112DEA49D7008BDC67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81C38C132DEA49D7008BDC67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		81C38C142DEA49D7008BDC67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81C38C142DEA49D7008BDC67 /* DetailedListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedListingView.swift; sourceTree = "<group>"; };
 		81C38C152DEA49D7008BDC67 /* ElectricRideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricRideApp.swift; sourceTree = "<group>"; };
+		81C38C1E2DEA5081008BDC67 /* DetailedListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedListing.swift; sourceTree = "<group>"; };
+		81C38C202DEA518B008BDC67 /* DetailedListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedListingViewModel.swift; sourceTree = "<group>"; };
+		81C38C302DEA52DE008BDC67 /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		81C38C352DEA53C2008BDC67 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		81C38C382DEA55CD008BDC67 /* IndividualListingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualListingRowView.swift; sourceTree = "<group>"; };
+		81C38C3A2DEA5932008BDC67 /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
+		81C38C3C2DEA5948008BDC67 /* IndividualListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualListingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +46,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C38C282DEA528E008BDC67 /* PostgREST in Frameworks */,
+				81C38C262DEA528E008BDC67 /* Functions in Frameworks */,
+				81C38C2E2DEA528E008BDC67 /* Supabase in Frameworks */,
+				81C38C242DEA528E008BDC67 /* Auth in Frameworks */,
+				81C38C2C2DEA528E008BDC67 /* Storage in Frameworks */,
+				81C38C2A2DEA528E008BDC67 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				81C38C152DEA49D7008BDC67 /* ElectricRideApp.swift */,
+				81C38C2F2DEA52D6008BDC67 /* Helpers */,
+				81C38C322DEA5382008BDC67 /* Logging */,
 				81C38C1B2DEA49DF008BDC67 /* Model */,
 				81C38C1C2DEA49E4008BDC67 /* ViewModels */,
 				81C38C1D2DEA49EC008BDC67 /* Views */,
@@ -72,6 +100,7 @@
 		81C38C1B2DEA49DF008BDC67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				81C38C1E2DEA5081008BDC67 /* DetailedListing.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -79,6 +108,7 @@
 		81C38C1C2DEA49E4008BDC67 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				81C38C202DEA518B008BDC67 /* DetailedListingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -86,9 +116,36 @@
 		81C38C1D2DEA49EC008BDC67 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				81C38C142DEA49D7008BDC67 /* ContentView.swift */,
+				81C38C372DEA557F008BDC67 /* Helpers */,
+				81C38C142DEA49D7008BDC67 /* DetailedListingView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		81C38C2F2DEA52D6008BDC67 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				81C38C302DEA52DE008BDC67 /* Supabase.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		81C38C322DEA5382008BDC67 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				81C38C352DEA53C2008BDC67 /* Logger.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		81C38C372DEA557F008BDC67 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				81C38C3C2DEA5948008BDC67 /* IndividualListingView.swift */,
+				81C38C3A2DEA5932008BDC67 /* KeyValueView.swift */,
+				81C38C382DEA55CD008BDC67 /* IndividualListingRowView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +165,12 @@
 			);
 			name = ElectricRide;
 			packageProductDependencies = (
+				81C38C232DEA528E008BDC67 /* Auth */,
+				81C38C252DEA528E008BDC67 /* Functions */,
+				81C38C272DEA528E008BDC67 /* PostgREST */,
+				81C38C292DEA528E008BDC67 /* Realtime */,
+				81C38C2B2DEA528E008BDC67 /* Storage */,
+				81C38C2D2DEA528E008BDC67 /* Supabase */,
 			);
 			productName = ElectricRide;
 			productReference = 81C38C002DEA3504008BDC67 /* ElectricRide.app */;
@@ -137,6 +200,9 @@
 			);
 			mainGroup = 81C38BF72DEA3504008BDC67;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				81C38C222DEA528E008BDC67 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 81C38C012DEA3504008BDC67 /* Products */;
 			projectDirPath = "";
@@ -164,8 +230,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81C38C192DEA49D7008BDC67 /* ContentView.swift in Sources */,
+				81C38C312DEA52E2008BDC67 /* Supabase.swift in Sources */,
+				81C38C362DEA53C2008BDC67 /* Logger.swift in Sources */,
+				81C38C3B2DEA5932008BDC67 /* KeyValueView.swift in Sources */,
+				81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */,
+				81C38C3D2DEA5948008BDC67 /* IndividualListingView.swift in Sources */,
+				81C38C1F2DEA5081008BDC67 /* DetailedListing.swift in Sources */,
 				81C38C1A2DEA49D7008BDC67 /* ElectricRideApp.swift in Sources */,
+				81C38C212DEA518B008BDC67 /* DetailedListingViewModel.swift in Sources */,
+				81C38C392DEA55CD008BDC67 /* IndividualListingRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +444,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81C38C222DEA528E008BDC67 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = exactVersion;
+				version = 2.24.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81C38C232DEA528E008BDC67 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81C38C222DEA528E008BDC67 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		81C38C252DEA528E008BDC67 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81C38C222DEA528E008BDC67 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		81C38C272DEA528E008BDC67 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81C38C222DEA528E008BDC67 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		81C38C292DEA528E008BDC67 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81C38C222DEA528E008BDC67 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		81C38C2B2DEA528E008BDC67 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81C38C222DEA528E008BDC67 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		81C38C2D2DEA528E008BDC67 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81C38C222DEA528E008BDC67 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81C38BF82DEA3504008BDC67 /* Project object */;
 }
