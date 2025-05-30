@@ -36,7 +36,7 @@ class DetailedListingViewModel: Observable {
                 .execute()
                 .value
 
-            Logger.database.info("DetailedListingViewModel: Listings with details retrived; about to assign results to `listings` array.")
+            Logger.database.info("DetailedListingViewModel: Listings with details retrieved; about to assign results to `listings` array.")
 
             self.listings = results
             
