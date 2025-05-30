@@ -1,5 +1,5 @@
 //
-//  Listing.swift
+//  DetailedListing.swift
 //  ElectricRide
 //
 //  Created by Russell Gordon on 2025-05-30.
