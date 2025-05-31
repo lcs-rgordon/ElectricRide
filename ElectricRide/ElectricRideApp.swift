@@ -18,7 +18,7 @@ struct ElectricRideApp: App {
     // MARK: Computed properties
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            BranchingView()
                 .environment(sharedAuthenticationStore)
         }
     }
