@@ -16,9 +16,9 @@ class IndividualListingViewModel: Observable {
     // MARK: Initializer(s)
     
     // MARK: Function(s)
-    func saveListing(withListingId listingId: Int) {
+    func saveListing(withListingId listingId: Int, forPatronWithId patronId: Int) {
 
-        Logger.database.info("IndividualListingViewModel: About to save listing with listing id \(listingId) for patron with id 2.")
+        Logger.database.info("IndividualListingViewModel: About to save listing with listing id \(listingId) for patron with id \(patronId).")
         
         // Make a constant with the current date and time
         let now = Date()
@@ -27,7 +27,7 @@ class IndividualListingViewModel: Observable {
         let newSavedListing = Saved(
             id: nil,
             savedOn: now,
-            patronId: 2,
+            patronId: patronId,
             listingId: listingId
         )
 
@@ -48,11 +48,11 @@ class IndividualListingViewModel: Observable {
                     .execute()
                     .value
 
-                Logger.database.info("IndividualListingViewModel: Listing with id \(listingId) saved; id of new row in `saved` table is \(confirmedSavedListing.id ?? 0).")
+                Logger.database.info("IndividualListingViewModel: Listing with id \(listingId) saved for patron with id \(patronId); id of new row in `saved` table is \(confirmedSavedListing.id ?? 0).")
 
                 
             } catch {
-                Logger.database.error("IndividualListingViewModel: Could not save listing with id \(listingId).")
+                Logger.database.error("IndividualListingViewModel: Could not save listing with id \(listingId) for patron with id \(patronId).")
                 Logger.database.error("\(error)")
             }
         }

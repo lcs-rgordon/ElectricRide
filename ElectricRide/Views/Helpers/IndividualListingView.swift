@@ -11,6 +11,9 @@ struct IndividualListingView: View {
     
     // MARK: Stored properties
     
+    // We need to know what patron is signed in
+    @Environment(SharedAuthenticationStore.self) var sharedAuthenticationStore
+
     // The listing to show
     let listing: DetailedListing
     
@@ -102,9 +105,13 @@ struct IndividualListingView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
                         
-                        Button(action: {
-                            // Save listing action
-                            viewModel.saveListing(withListingId: listing.id)
+                        Button(
+                            action: {
+                                // Save listing action
+                                viewModel.saveListing(
+                                    withListingId: listing.id,
+                                    forPatronWithId: sharedAuthenticationStore.signedInPatron?.id ?? 0
+                                )
                         }) {
                             HStack {
                                 Image(systemName: "heart")
@@ -128,4 +135,5 @@ struct IndividualListingView: View {
 
 #Preview {
     IndividualListingView(listing: DetailedListing.sampleData)
+        .environment(SharedAuthenticationStore())
 }
