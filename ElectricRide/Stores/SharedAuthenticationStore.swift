@@ -69,5 +69,9 @@ class SharedAuthenticationStore {
         self.signedInPatron = selectedPatron
         
     }
+    
+    func signOut() {
+        self.signedInPatron = nil
+    }
         
 }

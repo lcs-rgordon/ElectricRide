@@ -26,10 +26,17 @@ struct LandingView: View {
                     Text("Saved")
                 }
             
+            PatronView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("My profile")
+                }
+
         }
     }
 }
 
 #Preview {
     LandingView()
+        .environment(SharedAuthenticationStore())
 }
