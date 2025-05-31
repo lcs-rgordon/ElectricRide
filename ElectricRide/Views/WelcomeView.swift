@@ -28,7 +28,7 @@ struct WelcomeView: View {
                     Button {
                         // Will log user in eventually
                     } label: {
-                        Label("Sign in to get started", systemImage: "car.fill")
+                        Label("Sign in to see more details", systemImage: "car.fill")
                             .padding()
                     }
                     .buttonStyle(.borderedProminent)
