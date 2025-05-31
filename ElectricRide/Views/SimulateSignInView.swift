@@ -14,11 +14,24 @@ struct SimulateSignInView: View {
     // Get a reference to the shared authentication store
     @Environment(SharedAuthenticationStore.self) var sharedAuthenticationStore
     
+    // Which patron has been selected
+    @State private var selectedPatron: Patron?
+    
     // MARK: Computed properties
     var body: some View {
         NavigationStack {
             VStack {
-                // Add interface to select a patron here
+                if sharedAuthenticationStore.patrons.isEmpty {
+                    ProgressView()
+                } else {
+                    // Show a picker to select the patron
+                    Picker("Select a patron:", selection: $selectedPatron) {
+                        ForEach(sharedAuthenticationStore.patrons) { patron in
+                            Text("\(patron.lastName), \(patron.firstName)").tag(patron)
+                        }
+                    }
+                    .pickerStyle(.inline)
+                }
             }
             .navigationTitle("Simulate sign-in")
         }

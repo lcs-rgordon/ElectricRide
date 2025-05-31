@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Patron: Identifiable, Codable {
+struct Patron: Identifiable, Codable, Hashable {
     
     // MARK: Stored properties
     let id: Int

@@ -33,6 +33,11 @@ class SharedAuthenticationStore {
         
         // To begin, there is no one signed in
         self.signedInPatron = nil
+        
+        // Actually get the list of patrons
+        Task {
+            try await self.getAllPatrons()
+        }
     }
     
     // MARK: Function(s)
