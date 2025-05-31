@@ -14,7 +14,7 @@ class SharedAuthenticationStore {
     // MARK: Stored properties
 
     // The currently signed in patron
-    let signedInPatron: Patron?
+    var signedInPatron: Patron?
     
     // List of all patrons using the app
     var patrons: [Patron] = []
@@ -61,6 +61,12 @@ class SharedAuthenticationStore {
             Logger.database.error("SharedAuthenticationStore: Could not load available patrons.")
             Logger.database.error("\(error)")
         }
+        
+    }
+    
+    func setSignedInPatron(to selectedPatron: Patron) {
+        
+        self.signedInPatron = selectedPatron
         
     }
         

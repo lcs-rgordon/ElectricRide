@@ -14,6 +14,9 @@ struct SimulateSignInView: View {
     // Get a reference to the shared authentication store
     @Environment(SharedAuthenticationStore.self) var sharedAuthenticationStore
     
+    // Make it possible to dismiss this sheet
+    @Binding var showing: Bool
+    
     // Which patron has been selected
     @State private var selectedPatron: Patron?
     
@@ -33,6 +36,20 @@ struct SimulateSignInView: View {
                     .pickerStyle(.inline)
                 }
             }
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        // "Sign in" with the selected patron
+                        sharedAuthenticationStore.setSignedInPatron(to: selectedPatron!)
+                        // Dismiss this sheet
+                        showing = false
+                    } label: {
+                        Text("Sign In")
+                    }
+                    .disabled(selectedPatron == nil)
+
+                }
+            }
             .navigationTitle("Simulate sign-in")
         }
     }
@@ -45,7 +62,7 @@ struct SimulateSignInView: View {
     
     Text("View that appears behind this one")
         .sheet(isPresented: $sheetIsShowing) {
-            SimulateSignInView()
+            SimulateSignInView(showing: $sheetIsShowing)
                 .presentationDetents([.fraction(0.3), .medium])
                 .environment(sharedAuthenticationStore)
         }
