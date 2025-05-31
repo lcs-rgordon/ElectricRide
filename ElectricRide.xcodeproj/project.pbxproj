@@ -28,6 +28,9 @@
 		81C38C412DEB3544008BDC67 /* VehicleCountByBrandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C402DEB353E008BDC67 /* VehicleCountByBrandViewModel.swift */; };
 		81C38C432DEB36C9008BDC67 /* VehicleCountByBrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C422DEB36C9008BDC67 /* VehicleCountByBrandView.swift */; };
 		81C38C452DEB3A2C008BDC67 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C442DEB3A2C008BDC67 /* WelcomeView.swift */; };
+		81C38C472DEB4EB0008BDC67 /* SavedListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C462DEB4EB0008BDC67 /* SavedListing.swift */; };
+		81C38C492DEB4F85008BDC67 /* SavedListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C482DEB4F80008BDC67 /* SavedListingViewModel.swift */; };
+		81C38C4B2DEB5042008BDC67 /* SavedListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C4A2DEB5042008BDC67 /* SavedListingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		81C38C402DEB353E008BDC67 /* VehicleCountByBrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCountByBrandViewModel.swift; sourceTree = "<group>"; };
 		81C38C422DEB36C9008BDC67 /* VehicleCountByBrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCountByBrandView.swift; sourceTree = "<group>"; };
 		81C38C442DEB3A2C008BDC67 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		81C38C462DEB4EB0008BDC67 /* SavedListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListing.swift; sourceTree = "<group>"; };
+		81C38C482DEB4F80008BDC67 /* SavedListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingViewModel.swift; sourceTree = "<group>"; };
+		81C38C4A2DEB5042008BDC67 /* SavedListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 			children = (
 				81C38C1E2DEA5081008BDC67 /* DetailedListing.swift */,
 				81C38C3E2DEB3451008BDC67 /* VehicleCountByBrand.swift */,
+				81C38C462DEB4EB0008BDC67 /* SavedListing.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +124,7 @@
 		81C38C1C2DEA49E4008BDC67 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				81C38C482DEB4F80008BDC67 /* SavedListingViewModel.swift */,
 				81C38C402DEB353E008BDC67 /* VehicleCountByBrandViewModel.swift */,
 				81C38C202DEA518B008BDC67 /* DetailedListingViewModel.swift */,
 			);
@@ -130,6 +138,7 @@
 				81C38C142DEA49D7008BDC67 /* DetailedListingView.swift */,
 				81C38C422DEB36C9008BDC67 /* VehicleCountByBrandView.swift */,
 				81C38C442DEB3A2C008BDC67 /* WelcomeView.swift */,
+				81C38C4A2DEB5042008BDC67 /* SavedListingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,11 +256,14 @@
 				81C38C3F2DEB3451008BDC67 /* VehicleCountByBrand.swift in Sources */,
 				81C38C362DEA53C2008BDC67 /* Logger.swift in Sources */,
 				81C38C3B2DEA5932008BDC67 /* KeyValueView.swift in Sources */,
+				81C38C492DEB4F85008BDC67 /* SavedListingViewModel.swift in Sources */,
 				81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */,
 				81C38C432DEB36C9008BDC67 /* VehicleCountByBrandView.swift in Sources */,
 				81C38C452DEB3A2C008BDC67 /* WelcomeView.swift in Sources */,
+				81C38C4B2DEB5042008BDC67 /* SavedListingView.swift in Sources */,
 				81C38C3D2DEA5948008BDC67 /* IndividualListingView.swift in Sources */,
 				81C38C1F2DEA5081008BDC67 /* DetailedListing.swift in Sources */,
+				81C38C472DEB4EB0008BDC67 /* SavedListing.swift in Sources */,
 				81C38C1A2DEA49D7008BDC67 /* ElectricRideApp.swift in Sources */,
 				81C38C212DEA518B008BDC67 /* DetailedListingViewModel.swift in Sources */,
 				81C38C392DEA55CD008BDC67 /* IndividualListingRowView.swift in Sources */,
