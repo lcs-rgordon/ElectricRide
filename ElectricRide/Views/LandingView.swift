@@ -9,6 +9,11 @@ import SwiftUI
 
 struct LandingView: View {
     
+    // MARK: Stored properties
+
+    // Get a reference to the shared authentication store so we know which patron is logged in
+    @Environment(SharedAuthenticationStore.self) var sharedAuthenticationStore
+    
     // MARK: Computed properties
     var body: some View {
         
@@ -20,7 +25,11 @@ struct LandingView: View {
                     Text("Listings")
                 }
             
-            SavedListingView()
+            SavedListingView(
+                viewModel: SavedListingViewModel(
+                    forPatronWithId: sharedAuthenticationStore.signedInPatron?.id ?? 0
+                )
+            )
                 .tabItem {
                     Image(systemName: "heart.fill")
                     Text("Saved")

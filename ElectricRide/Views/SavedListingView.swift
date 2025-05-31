@@ -10,7 +10,7 @@ import SwiftUI
 struct SavedListingView: View {
     
     // MARK: Stored properties
-    @State private var viewModel = SavedListingViewModel()
+    let viewModel: SavedListingViewModel
     
     // MARK: Computed properties
     var body: some View {
@@ -53,6 +53,3 @@ struct SavedListingView: View {
     }
 }
 
-#Preview {
-    SavedListingView()
-}
