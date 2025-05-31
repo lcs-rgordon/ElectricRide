@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		815356092DEBA3430065EFB9 /* ChangeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356082DEBA3430065EFB9 /* ChangeNotifier.swift */; };
 		81C38C172DEA49D7008BDC67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C38C112DEA49D7008BDC67 /* Preview Assets.xcassets */; };
 		81C38C182DEA49D7008BDC67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C38C132DEA49D7008BDC67 /* Assets.xcassets */; };
 		81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C142DEA49D7008BDC67 /* DetailedListingView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		815356082DEBA3430065EFB9 /* ChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNotifier.swift; sourceTree = "<group>"; };
 		81C38C002DEA3504008BDC67 /* ElectricRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C38C112DEA49D7008BDC67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81C38C132DEA49D7008BDC67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		81C38C2F2DEA52D6008BDC67 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				815356082DEBA3430065EFB9 /* ChangeNotifier.swift */,
 				81C38C302DEA52DE008BDC67 /* Supabase.swift */,
 			);
 			path = Helpers;
@@ -291,6 +294,7 @@
 				81C38C3F2DEB3451008BDC67 /* VehicleCountByBrand.swift in Sources */,
 				81C38C512DEB5795008BDC67 /* Saved.swift in Sources */,
 				81C38C362DEA53C2008BDC67 /* Logger.swift in Sources */,
+				815356092DEBA3430065EFB9 /* ChangeNotifier.swift in Sources */,
 				81C38C3B2DEA5932008BDC67 /* KeyValueView.swift in Sources */,
 				81C38C5E2DEB7A27008BDC67 /* BranchingView.swift in Sources */,
 				81C38C492DEB4F85008BDC67 /* SavedListingViewModel.swift in Sources */,

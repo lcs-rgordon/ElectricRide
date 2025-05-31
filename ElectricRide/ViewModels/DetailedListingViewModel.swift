@@ -17,13 +17,24 @@ class DetailedListingViewModel: Observable {
     // MARK: Initializer(s)
     init() {
                 
-        // Get listings from database
-        Task {
-            try await getActiveListings()
-        }
+        // Refresh data
+        self.refresh()
     }
     
     // MARK: Function(s)
+    
+    // Required as available listings will change as other
+    // users of the app add vehicles they want to sell
+    func refresh() {
+        
+        Logger.database.info("DetailedListingViewModel: Refreshing...")
+        
+        Task {
+            try await getActiveListings()
+        }
+
+    }
+    
     func getActiveListings() async throws {
 
         Logger.database.info("DetailedListingViewModel: About to try loading listings with details from database.")

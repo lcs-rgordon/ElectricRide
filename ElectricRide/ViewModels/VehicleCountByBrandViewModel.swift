@@ -16,14 +16,26 @@ class VehicleCountByBrandViewModel: Observable {
     
     // MARK: Initializer(s)
     init() {
-                
-        // Get counts by brand from database
-        Task {
-            try await getCounts()
-        }
+
+        // Refresh data
+        self.refresh()
+
     }
     
     // MARK: Function(s)
+    
+    // Required since the count of listings could change
+    // as other users of the app add vehicle listings
+    func refresh() {
+        
+        Logger.database.info("VehicleCountByBrandViewModel: Refreshing...")
+        
+        Task {
+            try await getCounts()
+        }
+
+    }
+    
     func getCounts() async throws {
 
         Logger.database.info("VehicleCountByBrandViewModel: About to try loading count of vehicles available by brand.")

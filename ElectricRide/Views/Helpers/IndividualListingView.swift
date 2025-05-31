@@ -19,6 +19,9 @@ struct IndividualListingView: View {
     
     // View model to allow a listing to be saved
     @State private var viewModel = IndividualListingViewModel()
+    
+    // Tracks whether we have saved this listing
+    @State private var listingSaved = false
 
     // MARK: Computed properties
     private var formattedPrice: String {
@@ -112,18 +115,25 @@ struct IndividualListingView: View {
                                     withListingId: listing.id,
                                     forPatronWithId: sharedAuthenticationStore.signedInPatron?.id ?? 0
                                 )
+                                
+                                // Change the button appearance when a listing has been saved
+                                withAnimation {
+                                    listingSaved = true
+                                }
                         }) {
                             HStack {
-                                Image(systemName: "heart")
-                                Text("Save Listing")
+                                Image(systemName: listingSaved ? "heart.fill" : "heart")
+                                Text(listingSaved ? "Saved!" : "Save Listing")
                             }
                             .font(.headline)
-                            .foregroundColor(.blue)
+                            .foregroundColor(listingSaved ? .secondary : .blue)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.blue.opacity(0.1))
+                            .background(listingSaved ? Color.secondary.opacity(0.1) : Color.blue.opacity(0.1))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         }
+                        // Disable the button after listing has been saved
+                        .disabled(listingSaved)
                     }
                 }
                 .padding(.horizontal)
