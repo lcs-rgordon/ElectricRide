@@ -34,6 +34,8 @@
 		81C38C4D2DEB5321008BDC67 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C4C2DEB5321008BDC67 /* LandingView.swift */; };
 		81C38C512DEB5795008BDC67 /* Saved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C502DEB5794008BDC67 /* Saved.swift */; };
 		81C38C532DEB5854008BDC67 /* IndividualListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C522DEB5854008BDC67 /* IndividualListingViewModel.swift */; };
+		81C38C562DEB6023008BDC67 /* SharedAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C552DEB601C008BDC67 /* SharedAuthenticationStore.swift */; };
+		81C38C582DEB6105008BDC67 /* Patron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C572DEB6105008BDC67 /* Patron.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		81C38C4C2DEB5321008BDC67 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		81C38C502DEB5794008BDC67 /* Saved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saved.swift; sourceTree = "<group>"; };
 		81C38C522DEB5854008BDC67 /* IndividualListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualListingViewModel.swift; sourceTree = "<group>"; };
+		81C38C552DEB601C008BDC67 /* SharedAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAuthenticationStore.swift; sourceTree = "<group>"; };
+		81C38C572DEB6105008BDC67 /* Patron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patron.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				81C38C152DEA49D7008BDC67 /* ElectricRideApp.swift */,
 				81C38C2F2DEA52D6008BDC67 /* Helpers */,
 				81C38C322DEA5382008BDC67 /* Logging */,
+				81C38C542DEB600F008BDC67 /* Stores */,
 				81C38C1B2DEA49DF008BDC67 /* Model */,
 				81C38C1C2DEA49E4008BDC67 /* ViewModels */,
 				81C38C1D2DEA49EC008BDC67 /* Views */,
@@ -124,6 +129,7 @@
 				81C38C3E2DEB3451008BDC67 /* VehicleCountByBrand.swift */,
 				81C38C462DEB4EB0008BDC67 /* SavedListing.swift */,
 				81C38C502DEB5794008BDC67 /* Saved.swift */,
+				81C38C572DEB6105008BDC67 /* Patron.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +182,14 @@
 				81C38C382DEA55CD008BDC67 /* IndividualListingRowView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		81C38C542DEB600F008BDC67 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				81C38C552DEB601C008BDC67 /* SharedAuthenticationStore.swift */,
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +284,7 @@
 				81C38C4D2DEB5321008BDC67 /* LandingView.swift in Sources */,
 				81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */,
 				81C38C432DEB36C9008BDC67 /* VehicleCountByBrandView.swift in Sources */,
+				81C38C562DEB6023008BDC67 /* SharedAuthenticationStore.swift in Sources */,
 				81C38C452DEB3A2C008BDC67 /* WelcomeView.swift in Sources */,
 				81C38C4B2DEB5042008BDC67 /* SavedListingView.swift in Sources */,
 				81C38C3D2DEA5948008BDC67 /* IndividualListingView.swift in Sources */,
@@ -279,6 +294,7 @@
 				81C38C212DEA518B008BDC67 /* DetailedListingViewModel.swift in Sources */,
 				81C38C532DEB5854008BDC67 /* IndividualListingViewModel.swift in Sources */,
 				81C38C392DEA55CD008BDC67 /* IndividualListingRowView.swift in Sources */,
+				81C38C582DEB6105008BDC67 /* Patron.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
