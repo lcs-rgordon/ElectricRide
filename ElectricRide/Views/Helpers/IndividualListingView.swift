@@ -10,8 +10,14 @@ import SwiftUI
 struct IndividualListingView: View {
     
     // MARK: Stored properties
+    
+    // The listing to show
     let listing: DetailedListing
+    
+    // View model to allow a listing to be saved
+    @State private var viewModel = IndividualListingViewModel()
 
+    // MARK: Computed properties
     private var formattedPrice: String {
         return listing.price.formatted(.currency(code: "CAD"))
     }
@@ -98,6 +104,7 @@ struct IndividualListingView: View {
                         
                         Button(action: {
                             // Save listing action
+                            viewModel.saveListing(withListingId: listing.id)
                         }) {
                             HStack {
                                 Image(systemName: "heart")
