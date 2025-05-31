@@ -31,6 +31,7 @@
 		81C38C472DEB4EB0008BDC67 /* SavedListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C462DEB4EB0008BDC67 /* SavedListing.swift */; };
 		81C38C492DEB4F85008BDC67 /* SavedListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C482DEB4F80008BDC67 /* SavedListingViewModel.swift */; };
 		81C38C4B2DEB5042008BDC67 /* SavedListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C4A2DEB5042008BDC67 /* SavedListingView.swift */; };
+		81C38C4D2DEB5321008BDC67 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C4C2DEB5321008BDC67 /* LandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		81C38C462DEB4EB0008BDC67 /* SavedListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListing.swift; sourceTree = "<group>"; };
 		81C38C482DEB4F80008BDC67 /* SavedListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingViewModel.swift; sourceTree = "<group>"; };
 		81C38C4A2DEB5042008BDC67 /* SavedListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedListingView.swift; sourceTree = "<group>"; };
+		81C38C4C2DEB5321008BDC67 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				81C38C422DEB36C9008BDC67 /* VehicleCountByBrandView.swift */,
 				81C38C442DEB3A2C008BDC67 /* WelcomeView.swift */,
 				81C38C4A2DEB5042008BDC67 /* SavedListingView.swift */,
+				81C38C4C2DEB5321008BDC67 /* LandingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				81C38C362DEA53C2008BDC67 /* Logger.swift in Sources */,
 				81C38C3B2DEA5932008BDC67 /* KeyValueView.swift in Sources */,
 				81C38C492DEB4F85008BDC67 /* SavedListingViewModel.swift in Sources */,
+				81C38C4D2DEB5321008BDC67 /* LandingView.swift in Sources */,
 				81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */,
 				81C38C432DEB36C9008BDC67 /* VehicleCountByBrandView.swift in Sources */,
 				81C38C452DEB3A2C008BDC67 /* WelcomeView.swift in Sources */,
