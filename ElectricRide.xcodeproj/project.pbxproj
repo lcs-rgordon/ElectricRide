@@ -36,6 +36,7 @@
 		81C38C532DEB5854008BDC67 /* IndividualListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C522DEB5854008BDC67 /* IndividualListingViewModel.swift */; };
 		81C38C562DEB6023008BDC67 /* SharedAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C552DEB601C008BDC67 /* SharedAuthenticationStore.swift */; };
 		81C38C582DEB6105008BDC67 /* Patron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C572DEB6105008BDC67 /* Patron.swift */; };
+		81C38C5C2DEB6D82008BDC67 /* SimulateSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C5B2DEB6D81008BDC67 /* SimulateSignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		81C38C522DEB5854008BDC67 /* IndividualListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualListingViewModel.swift; sourceTree = "<group>"; };
 		81C38C552DEB601C008BDC67 /* SharedAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAuthenticationStore.swift; sourceTree = "<group>"; };
 		81C38C572DEB6105008BDC67 /* Patron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patron.swift; sourceTree = "<group>"; };
+		81C38C5B2DEB6D81008BDC67 /* SimulateSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateSignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				81C38C442DEB3A2C008BDC67 /* WelcomeView.swift */,
 				81C38C4A2DEB5042008BDC67 /* SavedListingView.swift */,
 				81C38C4C2DEB5321008BDC67 /* LandingView.swift */,
+				81C38C5B2DEB6D81008BDC67 /* SimulateSignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				81C38C3B2DEA5932008BDC67 /* KeyValueView.swift in Sources */,
 				81C38C492DEB4F85008BDC67 /* SavedListingViewModel.swift in Sources */,
 				81C38C4D2DEB5321008BDC67 /* LandingView.swift in Sources */,
+				81C38C5C2DEB6D82008BDC67 /* SimulateSignInView.swift in Sources */,
 				81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */,
 				81C38C432DEB36C9008BDC67 /* VehicleCountByBrandView.swift in Sources */,
 				81C38C562DEB6023008BDC67 /* SharedAuthenticationStore.swift in Sources */,

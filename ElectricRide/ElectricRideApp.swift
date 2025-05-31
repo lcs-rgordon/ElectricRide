@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct ElectricRideApp: App {
+    
+    // MARK: Stored properties
+    
+    // Tracks data related to user authentication within the app
+    @State private var sharedAuthenticationStore = SharedAuthenticationStore()
+
+    // MARK: Computed properties
     var body: some Scene {
         WindowGroup {
-            VehicleCountByBrandView()
+            WelcomeView()
+                .environment(sharedAuthenticationStore)
         }
     }
 }

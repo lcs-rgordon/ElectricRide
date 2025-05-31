@@ -6,13 +6,19 @@
 //
 
 import Foundation
+import OSLog
 
 @Observable @MainActor
 class SharedAuthenticationStore {
     
     // MARK: Stored properties
+
+    // The currently signed in patron
     let signedInPatron: Patron?
     
+    // List of all patrons using the app
+    var patrons: [Patron] = []
+
     // MARK: Computed properties
     var patronIsSignedIn: Bool {
         if signedInPatron == nil {
@@ -24,7 +30,33 @@ class SharedAuthenticationStore {
     
     // MARK: Initializer(s)
     init() {
+        
+        // To begin, there is no one signed in
         self.signedInPatron = nil
+    }
+    
+    // MARK: Function(s)
+    func getAllPatrons() async throws {
+
+        Logger.database.info("SharedAuthenticationStore: About to retrieve all patrons.")
+
+        do {
+            
+            let results: [Patron] = try await supabase
+                .from("patron")
+                .select()
+                .execute()
+                .value
+
+            Logger.database.info("SharedAuthenticationStore: Patrons retrieved; about to assign results to `patrons` array.")
+
+            self.patrons = results
+            
+        } catch {
+            Logger.database.error("SharedAuthenticationStore: Could not load available patrons.")
+            Logger.database.error("\(error)")
+        }
+        
     }
         
 }
