@@ -11,7 +11,7 @@ import SwiftUI
 struct ElectricRideApp: App {
     var body: some Scene {
         WindowGroup {
-            DetailedListingView()
+            VehicleCountByBrandView()
         }
     }
 }
