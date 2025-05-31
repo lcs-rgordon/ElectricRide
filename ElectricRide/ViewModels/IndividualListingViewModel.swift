@@ -44,6 +44,7 @@ class IndividualListingViewModel: Observable {
                     .from("saved")
                     .insert(newSavedListing)
                     // Now get back the newly created row (this will have an id assigned)
+                    .select()
                     .single()
                     .execute()
                     .value
