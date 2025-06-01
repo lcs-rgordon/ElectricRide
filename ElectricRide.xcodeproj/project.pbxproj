@@ -45,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		815356082DEBA3430065EFB9 /* ChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNotifier.swift; sourceTree = "<group>"; };
+		815356132DECDC010065EFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		81C38C002DEA3504008BDC67 /* ElectricRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C38C112DEA49D7008BDC67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81C38C132DEA49D7008BDC67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		81C38C162DEA49D7008BDC67 /* ElectricRide */ = {
 			isa = PBXGroup;
 			children = (
+				815356132DECDC010065EFB9 /* Info.plist */,
 				81C38C152DEA49D7008BDC67 /* ElectricRideApp.swift */,
 				81C38C2F2DEA52D6008BDC67 /* Helpers */,
 				81C38C322DEA5382008BDC67 /* Logging */,
@@ -451,6 +453,7 @@
 				DEVELOPMENT_TEAM = 4UG443984D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ElectricRide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -480,6 +483,7 @@
 				DEVELOPMENT_TEAM = 4UG443984D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ElectricRide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

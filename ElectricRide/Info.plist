@@ -5,8 +5,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string></string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.806225636862-o0oguc8a4erkua698s13cf8k9a4vqjv2</string>
+			</array>
 		</dict>
 	</array>
 	<key>GIDClientID</key>
