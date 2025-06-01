@@ -10,11 +10,11 @@ import Foundation
 struct Patron: Identifiable, Codable, Hashable {
     
     // MARK: Stored properties
-    let id: Int
+    let id: Int?
     let firstName: String
     let lastName: String
     let emailAddress: String
-    let phoneNumber: String
+    let phoneNumber: String?
     
     // Provide encoding and decoding hints when sending to/from Supabase
     enum CodingKeys: String, CodingKey {

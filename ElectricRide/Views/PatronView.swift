@@ -57,7 +57,7 @@ struct PatronView: View {
                             ContactInfoRow(
                                 icon: "phone.fill",
                                 label: "Phone",
-                                value: signedInPatron.phoneNumber
+                                value: signedInPatron.phoneNumber ?? ""
                             )
                             
                         }

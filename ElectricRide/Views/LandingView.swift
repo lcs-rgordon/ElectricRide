@@ -48,9 +48,9 @@ struct LandingView: View {
         // When this view appears, load the correct view model based on patron id
         .task {
             Logger.viewCycle.info("LandingView: View has appeared...")
-            if let signedInPatron = sharedAuthenticationStore.signedInPatron {
-                Logger.viewCycle.info("LandingView: Loading new instance of view model for patron with id \(signedInPatron.id)...")
-                savedListingsViewModel = SavedListingViewModel(forPatronWithId: signedInPatron.id)
+            if let signedInPatron = sharedAuthenticationStore.signedInPatron, let id = signedInPatron.id {
+                Logger.viewCycle.info("LandingView: Loading new instance of view model for patron with id \(id)...")
+                savedListingsViewModel = SavedListingViewModel(forPatronWithId: id)
             }
         }
         // Watch for database changes

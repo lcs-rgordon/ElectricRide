@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		815356092DEBA3430065EFB9 /* ChangeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356082DEBA3430065EFB9 /* ChangeNotifier.swift */; };
+		815356182DECE4D00065EFB9 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356152DECE4D00065EFB9 /* AuthenticationError.swift */; };
+		815356192DECE4D00065EFB9 /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356172DECE4D00065EFB9 /* AuthenticationState.swift */; };
+		8153561A2DECE4D00065EFB9 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356162DECE4D00065EFB9 /* AuthenticationService.swift */; };
 		8153561E2DECE6C60065EFB9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8153561D2DECE6C60065EFB9 /* GoogleSignIn */; };
 		815356202DECE6C60065EFB9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8153561F2DECE6C60065EFB9 /* GoogleSignInSwift */; };
+		815356222DECF0A40065EFB9 /* SignInButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356212DECF0A40065EFB9 /* SignInButtonsView.swift */; };
 		81C38C172DEA49D7008BDC67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C38C112DEA49D7008BDC67 /* Preview Assets.xcassets */; };
 		81C38C182DEA49D7008BDC67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81C38C132DEA49D7008BDC67 /* Assets.xcassets */; };
 		81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C142DEA49D7008BDC67 /* DetailedListingView.swift */; };
@@ -39,7 +43,6 @@
 		81C38C532DEB5854008BDC67 /* IndividualListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C522DEB5854008BDC67 /* IndividualListingViewModel.swift */; };
 		81C38C562DEB6023008BDC67 /* SharedAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C552DEB601C008BDC67 /* SharedAuthenticationStore.swift */; };
 		81C38C582DEB6105008BDC67 /* Patron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C572DEB6105008BDC67 /* Patron.swift */; };
-		81C38C5C2DEB6D82008BDC67 /* SimulateSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C5B2DEB6D81008BDC67 /* SimulateSignInView.swift */; };
 		81C38C5E2DEB7A27008BDC67 /* BranchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C5D2DEB7A27008BDC67 /* BranchingView.swift */; };
 		81C38C602DEB7EB4008BDC67 /* PatronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C5F2DEB7EB4008BDC67 /* PatronView.swift */; };
 		81C38C622DEB7F81008BDC67 /* ContactInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C38C612DEB7F81008BDC67 /* ContactInfoRow.swift */; };
@@ -48,6 +51,10 @@
 /* Begin PBXFileReference section */
 		815356082DEBA3430065EFB9 /* ChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNotifier.swift; sourceTree = "<group>"; };
 		815356132DECDC010065EFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		815356152DECE4D00065EFB9 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		815356162DECE4D00065EFB9 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		815356172DECE4D00065EFB9 /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
+		815356212DECF0A40065EFB9 /* SignInButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonsView.swift; sourceTree = "<group>"; };
 		81C38C002DEA3504008BDC67 /* ElectricRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectricRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81C38C112DEA49D7008BDC67 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81C38C132DEA49D7008BDC67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +79,6 @@
 		81C38C522DEB5854008BDC67 /* IndividualListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualListingViewModel.swift; sourceTree = "<group>"; };
 		81C38C552DEB601C008BDC67 /* SharedAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAuthenticationStore.swift; sourceTree = "<group>"; };
 		81C38C572DEB6105008BDC67 /* Patron.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patron.swift; sourceTree = "<group>"; };
-		81C38C5B2DEB6D81008BDC67 /* SimulateSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulateSignInView.swift; sourceTree = "<group>"; };
 		81C38C5D2DEB7A27008BDC67 /* BranchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchingView.swift; sourceTree = "<group>"; };
 		81C38C5F2DEB7EB4008BDC67 /* PatronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatronView.swift; sourceTree = "<group>"; };
 		81C38C612DEB7F81008BDC67 /* ContactInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoRow.swift; sourceTree = "<group>"; };
@@ -97,6 +103,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		815356142DECE4A70065EFB9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8153561B2DECE5480065EFB9 /* Enumerations */,
+				81C38C542DEB600F008BDC67 /* Stores */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8153561B2DECE5480065EFB9 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				815356152DECE4D00065EFB9 /* AuthenticationError.swift */,
+				815356162DECE4D00065EFB9 /* AuthenticationService.swift */,
+				815356172DECE4D00065EFB9 /* AuthenticationState.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
 		81C38BF72DEA3504008BDC67 = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +151,9 @@
 			children = (
 				815356132DECDC010065EFB9 /* Info.plist */,
 				81C38C152DEA49D7008BDC67 /* ElectricRideApp.swift */,
+				815356142DECE4A70065EFB9 /* Authentication */,
 				81C38C2F2DEA52D6008BDC67 /* Helpers */,
 				81C38C322DEA5382008BDC67 /* Logging */,
-				81C38C542DEB600F008BDC67 /* Stores */,
 				81C38C1B2DEA49DF008BDC67 /* Model */,
 				81C38C1C2DEA49E4008BDC67 /* ViewModels */,
 				81C38C1D2DEA49EC008BDC67 /* Views */,
@@ -170,7 +195,7 @@
 				81C38C442DEB3A2C008BDC67 /* WelcomeView.swift */,
 				81C38C4A2DEB5042008BDC67 /* SavedListingView.swift */,
 				81C38C4C2DEB5321008BDC67 /* LandingView.swift */,
-				81C38C5B2DEB6D81008BDC67 /* SimulateSignInView.swift */,
+				815356212DECF0A40065EFB9 /* SignInButtonsView.swift */,
 				81C38C5D2DEB7A27008BDC67 /* BranchingView.swift */,
 				81C38C5F2DEB7EB4008BDC67 /* PatronView.swift */,
 			);
@@ -308,15 +333,18 @@
 				81C38C5E2DEB7A27008BDC67 /* BranchingView.swift in Sources */,
 				81C38C492DEB4F85008BDC67 /* SavedListingViewModel.swift in Sources */,
 				81C38C4D2DEB5321008BDC67 /* LandingView.swift in Sources */,
-				81C38C5C2DEB6D82008BDC67 /* SimulateSignInView.swift in Sources */,
 				81C38C192DEA49D7008BDC67 /* DetailedListingView.swift in Sources */,
 				81C38C432DEB36C9008BDC67 /* VehicleCountByBrandView.swift in Sources */,
+				815356182DECE4D00065EFB9 /* AuthenticationError.swift in Sources */,
+				815356192DECE4D00065EFB9 /* AuthenticationState.swift in Sources */,
+				8153561A2DECE4D00065EFB9 /* AuthenticationService.swift in Sources */,
 				81C38C562DEB6023008BDC67 /* SharedAuthenticationStore.swift in Sources */,
 				81C38C452DEB3A2C008BDC67 /* WelcomeView.swift in Sources */,
 				81C38C4B2DEB5042008BDC67 /* SavedListingView.swift in Sources */,
 				81C38C3D2DEA5948008BDC67 /* IndividualListingView.swift in Sources */,
 				81C38C1F2DEA5081008BDC67 /* DetailedListing.swift in Sources */,
 				81C38C472DEB4EB0008BDC67 /* SavedListing.swift in Sources */,
+				815356222DECF0A40065EFB9 /* SignInButtonsView.swift in Sources */,
 				81C38C1A2DEA49D7008BDC67 /* ElectricRideApp.swift in Sources */,
 				81C38C212DEA518B008BDC67 /* DetailedListingViewModel.swift in Sources */,
 				81C38C532DEB5854008BDC67 /* IndividualListingViewModel.swift in Sources */,
