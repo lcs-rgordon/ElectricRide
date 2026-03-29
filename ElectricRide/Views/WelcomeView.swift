@@ -28,6 +28,7 @@ struct WelcomeView: View {
                     VehicleCountByBrandView()
                     
                     SignInButtonsView()
+                        .padding(.top, 20)
 
                     Spacer()
                     
