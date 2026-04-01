@@ -7,7 +7,6 @@
 
 import Foundation
 import OSLog
-import GoogleSignIn
 import Supabase
 
 @Observable @MainActor

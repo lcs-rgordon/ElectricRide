@@ -7,13 +7,18 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>ca.on.lcs.ElectricRide</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.806225636862-o0oguc8a4erkua698s13cf8k9a4vqjv2</string>
+				<string>electricride</string>
 			</array>
 		</dict>
 	</array>
-	<key>GIDClientID</key>
-	<string>806225636862-o0oguc8a4erkua698s13cf8k9a4vqjv2.apps.googleusercontent.com</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

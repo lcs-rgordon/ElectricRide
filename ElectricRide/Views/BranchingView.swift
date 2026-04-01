@@ -5,6 +5,7 @@
 //  Created by Russell Gordon on 2025-05-31.
 //
 
+import OSLog
 import SwiftUI
 
 struct BranchingView: View {
@@ -49,7 +50,15 @@ struct BranchingView: View {
             ),
             value: sharedAuthenticationStore.authenticationStatus
         )
-        
+        .onOpenURL { url in
+              Task {
+                  do {
+                      try await supabase.auth.session(from: url)
+                  } catch {
+                      Logger.authentication.error("BranchingView: Error handling OAuth callback: \(String(describing: error))")
+                  }
+              }
+          }
     }
 }
 
