@@ -27,21 +27,24 @@ class ChangeNotifier: Observable {
     // MARK: Initializer(s)
     init() {
         
-        Logger.database.info("EnrollmentChangeNotifier: Initializer has completed.")
+        Logger.database.info("ChangeNotifier: Initializer has completed.")
+        
+        // Subscribe immediately when the notifier is created
+        subscribe()
         
 	}
     
     // MARK: Function(s)
     func subscribe() {
         
-        Logger.database.info("EnrollmentChangeNotifier: About to create channel to receive realtime updates.")
+        Logger.database.info("ChangeNotifier: About to create channel to receive realtime updates.")
  
         // Create a channel to that we will subscribe to
         // and receive realtime updates from
         self.channel = supabase.channel("listing-updates")
         if let channel = self.channel {
  
-            Logger.database.info("EnrollmentChangeNotifier: Successfully created channel to receive realtime updates.")
+            Logger.database.info("ChangeNotifier: Successfully created channel to receive realtime updates.")
  
             // We are going to observe all changes
             // (insertions, updates, deletions)
@@ -51,19 +54,19 @@ class ChangeNotifier: Observable {
                 schema: "public"
             )
             
-            Logger.database.info("EnrollmentChangeNotifier: Successfully created stream to identify scope of database changes we will subscribe to (all types of changes, on all database tables).")
+            Logger.database.info("ChangeNotifier: Successfully created stream to identify scope of database changes we will subscribe to (all types of changes, on all database tables).")
 		
             Task {
                 
                 // Subscribe to notifications on the channel
                 await channel.subscribe()
  
-                Logger.database.info("EnrollmentChangeNotifier: Now subscribed to channel to receive realtime updates.")
+                Logger.database.info("ChangeNotifier: Now subscribed to channel to receive realtime updates.")
  
                 // When a change occurs, run this code block
                 for await change in changeStream {
                     
-                    Logger.database.info("EnrollmentChangeNotifier: Database changed; incrementing change counter.")
+                    Logger.database.info("ChangeNotifier: Database changed; incrementing change counter.")
  
                     // Update the count of changes to tell subscribing views
                     // to ask their view models to update
@@ -75,20 +78,20 @@ class ChangeNotifier: Observable {
  
         } else {
             
-            Logger.database.info("EnrollmentChangeNotifier: Unable to create channel to receive realtime updates.")
+            Logger.database.info("ChangeNotifier: Unable to create channel to receive realtime updates.")
  
         }
         
     }
     
     func unsubscribe() {
-        Logger.database.info("EnrollmentChangeNotifier: About to unsubscribe from realtime updates channel.")
+        Logger.database.info("ChangeNotifier: About to unsubscribe from realtime updates channel.")
         Task {
             if let channel = channel {
                 await supabase.removeChannel(channel)
-                Logger.database.info("EnrollmentChangeNotifier: Successfully unsubscribed from realtime updates channel.")
+                Logger.database.info("ChangeNotifier: Successfully unsubscribed from realtime updates channel.")
             } else {
-                Logger.database.info("EnrollmentChangeNotifier: Could not unsubscribe from realtime updates channel.")
+                Logger.database.info("ChangeNotifier: Could not unsubscribe from realtime updates channel.")
             }
  
         }
