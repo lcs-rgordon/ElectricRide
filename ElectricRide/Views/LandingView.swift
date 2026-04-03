@@ -18,32 +18,46 @@ struct LandingView: View {
     // Gain access to the shared change notifier so we can tell when a refresh of data is required
     @Environment(ChangeNotifier.self) private var changeNotifier
     
-    // Store the view model for saved listing (at first with a patron id of 0)
-    @State private var savedListingsViewModel = SavedListingViewModel(forPatronWithId: 0)
+    // Store the view model for saved listing (initialized once patron id is available)
+    @State private var savedListingsViewModel: SavedListingViewModel?
     
     // MARK: Computed properties
     var body: some View {
         
-        TabView {
-            
-            DetailedListingView()
-                .tabItem {
-                    Image(systemName: "text.page.fill")
-                    Text("Listings")
+        Group {
+            if let savedListingsViewModel {
+                TabView {
+                    
+                    DetailedListingView()
+                        .tabItem {
+                            Image(systemName: "text.page.fill")
+                            Text("Listings")
+                        }
+                    
+                    SavedListingView(viewModel: savedListingsViewModel)
+                        .tabItem {
+                            Image(systemName: "heart.fill")
+                            Text("Saved")
+                        }
+                    
+                    PatronView()
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                            Text("My profile")
+                        }
+                    
                 }
-            
-            SavedListingView(viewModel: savedListingsViewModel)
-                .tabItem {
-                    Image(systemName: "heart.fill")
-                    Text("Saved")
+                // Watch for database changes
+                .onChange(of: changeNotifier.changeCount) {
+                    
+                    Logger.viewCycle.info("LandingView: Database change observed; updating SavedListingViewModel...")
+                    
+                    savedListingsViewModel.refresh()
                 }
-            
-            PatronView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("My profile")
-                }
-            
+            } else {
+                // Show a loading indicator while waiting for patron authentication
+                ProgressView("Loading...")
+            }
         }
         // When this view appears, load the correct view model based on patron id
         .task {
@@ -53,12 +67,13 @@ struct LandingView: View {
                 savedListingsViewModel = SavedListingViewModel(forPatronWithId: id)
             }
         }
-        // Watch for database changes
-        .onChange(of: changeNotifier.changeCount) {
-            
-            Logger.viewCycle.info("LandingView: Database change observed; updating SavedListingViewModel...")
-            
-            savedListingsViewModel.refresh()
+        // Watch for when signedInPatron changes (e.g., session restoration)
+        .onChange(of: sharedAuthenticationStore.signedInPatron) { oldValue, newValue in
+            Logger.viewCycle.info("LandingView: signedInPatron changed...")
+            if let signedInPatron = newValue, let id = signedInPatron.id {
+                Logger.viewCycle.info("LandingView: Creating view model for patron with id \(id)...")
+                savedListingsViewModel = SavedListingViewModel(forPatronWithId: id)
+            }
         }
     }
     

@@ -143,7 +143,9 @@ class SharedAuthenticationStore {
 
             // Set the active patron record
             self.signedInPatron = results[0]
-            
+
+            Logger.authentication.info("SharedAuthenticationStore: Signed in patron has an id of \(self.signedInPatron?.id ?? 0).")
+
         } else if results.count == 0 {
             
             Logger.authentication.info("SharedAuthenticationStore: Email address not yet in database, this is a new user of the app.")
