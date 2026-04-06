@@ -13,7 +13,13 @@ import Supabase
 let supabaseURL = URL(string: "https://yybjbuweyxwtmmyrvepr.supabase.co")!
 let supabase = SupabaseClient(
     supabaseURL: supabaseURL,
-    supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5YmpidXdleXh3dG1teXJ2ZXByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg2MzQ2ODgsImV4cCI6MjA2NDIxMDY4OH0.i-oZcMfzJ80O3nIf6HJg9NL5i8Mi4vQOSUfxQSnowQ4"
+    supabaseKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl5YmpidXdleXh3dG1teXJ2ZXByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg2MzQ2ODgsImV4cCI6MjA2NDIxMDY4OH0.i-oZcMfzJ80O3nIf6HJg9NL5i8Mi4vQOSUfxQSnowQ4",
+    options: SupabaseClientOptions(
+        auth: .init(
+            // Opt-in to the new behavior for session handling
+            emitLocalSessionAsInitialSession: true
+        )
+    )
 )
 
 // Use live server at supabase.co in another account

@@ -47,7 +47,20 @@ class ChangeNotifier: Observable {
         }
         
         Logger.database.info("ChangeNotifier: About to create channel to receive realtime updates.")
-        Logger.database.info("ChangeNotifier: Current auth session exists: \(supabase.auth.currentSession != nil)")
+        
+        // Check if we have a valid session
+        guard let session = supabase.auth.currentSession else {
+            Logger.database.error("ChangeNotifier: No auth session found, cannot subscribe to realtime.")
+            return
+        }
+        
+        // Check if the session is expired
+        if session.isExpired {
+            Logger.database.error("ChangeNotifier: Auth session is expired, cannot subscribe to realtime.")
+            return
+        }
+        
+        Logger.database.info("ChangeNotifier: Valid auth session exists, proceeding with subscription.")
         
         // IMPORTANT: Use a unique channel name!
         // Using UUID ensures no conflicts with previous connections

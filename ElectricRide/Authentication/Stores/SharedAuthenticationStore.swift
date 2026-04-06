@@ -222,8 +222,18 @@ class SharedAuthenticationStore {
                     Logger.authentication.info("SharedAuthenticationStore: There is no existing authenticated session to restore; setting authentication status to 'signed out'.")
                     self.authenticationStatus = .signedOut
                 } else {
-                    Logger.authentication.info("SharedAuthenticationStore: An authenticated session exists; setting authentication status to 'signed in'.")
-                    self.authenticationStatus = .signedIn
+                    // We have a session, but check if it's expired
+                    if let session = state.session, session.isExpired {
+                        Logger.authentication.warning("SharedAuthenticationStore: Session exists but is expired; setting authentication status to 'signed out'.")
+                        self.authenticationStatus = .signedOut
+                        // Sign out to clean up the expired session
+                        Task {
+                            try? await supabase.auth.signOut(scope: .local)
+                        }
+                    } else {
+                        Logger.authentication.info("SharedAuthenticationStore: An authenticated session exists and is valid; setting authentication status to 'signed in'.")
+                        self.authenticationStatus = .signedIn
+                    }
                 }
 
                 if self.authenticationStatus == .signedIn {

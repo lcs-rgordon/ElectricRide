@@ -60,12 +60,17 @@ class ChangeNotifier: Observable {
             Task {
                 
                 // Subscribe to notifications on the channel
-                await channel.subscribe()
- 
-                Logger.database.info("ChangeNotifier: Now subscribed to channel to receive realtime updates.")
+                // Note: Using subscribeWithError to handle potential subscription errors
+                do {
+                    try await channel.subscribeWithError()
+                    Logger.database.info("ChangeNotifier: Now subscribed to channel to receive realtime updates.")
+                } catch {
+                    Logger.database.error("ChangeNotifier: Failed to subscribe to channel: \(error)")
+                    return
+                }
  
                 // When a change occurs, run this code block
-                for await change in changeStream {
+                for await _ in changeStream {
                     
                     Logger.database.info("ChangeNotifier: Database changed; incrementing change counter.")
  
