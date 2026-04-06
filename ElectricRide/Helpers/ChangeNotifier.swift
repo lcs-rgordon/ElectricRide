@@ -29,33 +29,34 @@ class ChangeNotifier: Observable {
         
         Logger.database.info("ChangeNotifier: Initializer has completed.")
         
-        // Subscribe immediately when the notifier is created
-        subscribe()
-        
-	}
+    }
     
     // MARK: Function(s)
     func subscribe() {
         
         Logger.database.info("ChangeNotifier: About to create channel to receive realtime updates.")
  
-        // Create a channel to that we will subscribe to
-        // and receive realtime updates from
-        self.channel = supabase.channel("listing-updates")
+        // Create a channel with a unique name to receive realtime updates
+        // Using UUID ensures no conflicts with previous connections
+        let channelName = UUID().uuidString
+        Logger.database.info("ChangeNotifier: Channel name will be: \(channelName)")
+        self.channel = supabase.channel(channelName)
+
         if let channel = self.channel {
  
             Logger.database.info("ChangeNotifier: Successfully created channel to receive realtime updates.")
  
             // We are going to observe all changes
             // (insertions, updates, deletions)
-            // on any table in the database
+            // on the "saved" table in the database
             let changeStream = channel.postgresChange(
                 AnyAction.self,
-                schema: "public"
+                schema: "public",
+                table: "saved"
             )
             
-            Logger.database.info("ChangeNotifier: Successfully created stream to identify scope of database changes we will subscribe to (all types of changes, on all database tables).")
-		
+            Logger.database.info("ChangeNotifier: Successfully created stream to monitor 'saved' table changes.")
+        
             Task {
                 
                 // Subscribe to notifications on the channel

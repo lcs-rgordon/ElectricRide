@@ -65,6 +65,10 @@ struct LandingView: View {
             if let signedInPatron = sharedAuthenticationStore.signedInPatron, let id = signedInPatron.id {
                 Logger.viewCycle.info("LandingView: Loading new instance of view model for patron with id \(id)...")
                 savedListingsViewModel = SavedListingViewModel(forPatronWithId: id)
+                
+                // Now that user is authenticated, subscribe to realtime updates
+                Logger.viewCycle.info("LandingView: User is authenticated, subscribing to realtime updates...")
+                changeNotifier.subscribe()
             }
         }
         // Watch for when signedInPatron changes (e.g., session restoration)
@@ -73,6 +77,9 @@ struct LandingView: View {
             if let signedInPatron = newValue, let id = signedInPatron.id {
                 Logger.viewCycle.info("LandingView: Creating view model for patron with id \(id)...")
                 savedListingsViewModel = SavedListingViewModel(forPatronWithId: id)
+                
+                // Note: We DON'T subscribe here because .task already handles it
+                // Subscribing again would create a duplicate subscription
             }
         }
     }

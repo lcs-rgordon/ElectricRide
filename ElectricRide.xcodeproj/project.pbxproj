@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		815356092DEBA3430065EFB9 /* ChangeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356082DEBA3430065EFB9 /* ChangeNotifier.swift */; };
+		8128CF642F84425D00947FCC /* ChangeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8128CF632F84425D00947FCC /* ChangeNotifier.swift */; };
 		815356182DECE4D00065EFB9 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356152DECE4D00065EFB9 /* AuthenticationError.swift */; };
 		815356192DECE4D00065EFB9 /* AuthenticationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356172DECE4D00065EFB9 /* AuthenticationState.swift */; };
 		8153561A2DECE4D00065EFB9 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815356162DECE4D00065EFB9 /* AuthenticationService.swift */; };
@@ -47,7 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		815356082DEBA3430065EFB9 /* ChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNotifier.swift; sourceTree = "<group>"; };
+		8128CF632F84425D00947FCC /* ChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNotifier.swift; sourceTree = "<group>"; };
+		8128CF652F844A0100947FCC /* ChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNotifier.swift; sourceTree = "<group>"; };
 		815356152DECE4D00065EFB9 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		815356162DECE4D00065EFB9 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		815356172DECE4D00065EFB9 /* AuthenticationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationState.swift; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 			children = (
 				81C38C162DEA49D7008BDC67 /* ElectricRide */,
 				81C38C012DEA3504008BDC67 /* Products */,
+				8128CF652F844A0100947FCC /* ChangeNotifier.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,7 +201,7 @@
 		81C38C2F2DEA52D6008BDC67 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				815356082DEBA3430065EFB9 /* ChangeNotifier.swift */,
+				8128CF632F84425D00947FCC /* ChangeNotifier.swift */,
 				81C38C302DEA52DE008BDC67 /* Supabase.swift */,
 			);
 			path = Helpers;
@@ -319,7 +321,7 @@
 				81C38C3F2DEB3451008BDC67 /* VehicleCountByBrand.swift in Sources */,
 				81C38C512DEB5795008BDC67 /* Saved.swift in Sources */,
 				81C38C362DEA53C2008BDC67 /* Logger.swift in Sources */,
-				815356092DEBA3430065EFB9 /* ChangeNotifier.swift in Sources */,
+				8128CF642F84425D00947FCC /* ChangeNotifier.swift in Sources */,
 				81C38C3B2DEA5932008BDC67 /* KeyValueView.swift in Sources */,
 				81C38C5E2DEB7A27008BDC67 /* BranchingView.swift in Sources */,
 				81C38C492DEB4F85008BDC67 /* SavedListingViewModel.swift in Sources */,
